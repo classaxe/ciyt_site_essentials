@@ -1,0 +1,19 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+# block referal spammers
+RewriteCond %{HTTP_REFERER} semalt\.com [NC]
+RewriteCond %{HTTP_REFERER} kambasoft\.com [NC]
+RewriteRule .* - [F]
+
+RewriteCond %{HTTP_USER_AGENT} msnbot [OR]
+RewriteCond %{HTTP_USER_AGENT} Slurp
+RewriteRule .* - [F]
+
+RewriteBase /
+ReWriteRule facebook$ streamer.php [L]
+ReWriteRule ^(ajax|cron|css|facebook|img|java|lib|osd|qbwc|resource|search|sysjs)(\?|/) streamer.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]
+</IfModule>
