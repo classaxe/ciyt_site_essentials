@@ -11,6 +11,6 @@ define (
   ."NiZ2lWaXNmdnE2TipnTmh3TnBGcjc3"
   ."UU4qT29oU3VkdlpweHM=");
 
-define("SYS_SHARED","/srv/www/shared/");
+define("SYS_SHARED","/srv/www/ciyt/shared/");
 $dsn = 'mysql://ciyt:clamp_ciyt_777@localhost/ecclesiact';
 
