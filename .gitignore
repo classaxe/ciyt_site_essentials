@@ -1,2 +1,6 @@
-sql
+.DS_Store
+.idea/
+ecclesiact_sql/
+logs/
+sql/
 shared
